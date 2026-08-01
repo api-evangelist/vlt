@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.vlt.io/
+versioning:
+  scheme: semver release-candidate train (1.0.0-rc.N) for the CLI and vsr;
+    npm dist-tags (latest) on the vlt and @vltpkg/vsr packages
+  current: 1.0.0-rc.32
+  docs: https://github.com/vltpkg/vltpkg/releases
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No published deprecation policy or RFC 8594 Sunset header support
+    was found; products are pre-1.0 (release candidates).
+sla:
+  url: null
+status_page: https://status.vlt.io/
+status_page_details:
+  provider: Atlassian Statuspage
+  components:
+  - Website (www.vlt.io)
+  - API (api.vlt.io)
+  - Registry Service (registry.vlt.io)
+  feeds:
+  - https://status.vlt.io/history.atom
+  - https://status.vlt.io/history.rss
+deprecated_operations: []

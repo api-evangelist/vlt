@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.vlt.io/pricing
+plan_count: 4
+currency: USD
+billing: monthly or annually (annual billing saves 20%)
+plans:
+- name: Free
+  price: 0
+  unit: per user / month
+  audience: For developers trying out vlt for the first time
+  features:
+  - Upstream Proxy
+  - User Management
+  - Token Management
+  - Community Support
+  - 2GB Storage+Delivery
+- name: Pro
+  price: 8
+  unit: per user / month (billed annually)
+  audience: For developers who need extra bandwidth
+  features:
+  - Everything in Free
+  - Chat and email support
+  - 10GB Storage+Delivery
+  - Additional usage billed per GB
+- name: Premium
+  price: 20
+  unit: per user / month (billed annually, minimum 2 seats)
+  audience: For growing teams that need even more bandwidth
+  features:
+  - Everything in Pro
+  - 50GB Storage+Delivery
+  - Additional usage billed per GB
+- name: Enterprise
+  price: null
+  unit: custom
+  audience: For large organizations with advanced needs
+  features:
+  - Everything in Premium
+  - Advanced needs / custom terms (contact sales)

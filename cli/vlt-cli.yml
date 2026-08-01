@@ -1,0 +1,74 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.vlt.io/cli/commands
+docs: https://docs.vlt.io/cli
+name: vlt
+description: The vlt CLI is the company's flagship product - a next-generation
+  JavaScript package manager and drop-in replacement for npm/yarn/pnpm, with a
+  CSS-like Dependency Selector Syntax (vlt query), security and malware
+  detection insights, workspaces, catalogs, and companion binary shortcuts.
+requirements: Node.js 20 or 22
+install:
+- method: npm
+  command: npm i -g vlt
+- method: pnpm
+  command: pnpm i -g vlt
+- method: github-actions
+  command: uses vltpkg/setup-vlt@v1
+  url: https://github.com/vltpkg/setup-vlt
+commands:
+  project:
+  - {name: init, docs: https://docs.vlt.io/cli/commands/init}
+  - {name: create, docs: https://docs.vlt.io/cli/commands/create}
+  - {name: install, docs: https://docs.vlt.io/cli/commands/install}
+  - {name: uninstall, docs: https://docs.vlt.io/cli/commands/uninstall}
+  - {name: pkg, docs: https://docs.vlt.io/cli/commands/pkg}
+  - {name: list, docs: https://docs.vlt.io/cli/commands/list}
+  - {name: query, docs: https://docs.vlt.io/cli/commands/query}
+  - {name: build, docs: https://docs.vlt.io/cli/commands/build}
+  run-and-exec:
+  - {name: run, docs: https://docs.vlt.io/cli/commands/run}
+  - {name: run-exec, docs: https://docs.vlt.io/cli/commands/run-exec}
+  - {name: exec, docs: https://docs.vlt.io/cli/commands/exec}
+  - {name: exec-local, docs: https://docs.vlt.io/cli/commands/exec-local}
+  - {name: exec-cache, docs: https://docs.vlt.io/cli/commands/exec-cache}
+  registry-and-auth:
+  - {name: login, docs: https://docs.vlt.io/cli/commands/login}
+  - {name: logout, docs: https://docs.vlt.io/cli/commands/logout}
+  - {name: token, docs: https://docs.vlt.io/cli/commands/token}
+  - {name: whoami, docs: https://docs.vlt.io/cli/commands/whoami}
+  - {name: publish, docs: https://docs.vlt.io/cli/commands/publish}
+  - {name: pack, docs: https://docs.vlt.io/cli/commands/pack}
+  - {name: ping, docs: https://docs.vlt.io/cli/commands/ping}
+  utility:
+  - {name: cache, docs: https://docs.vlt.io/cli/commands/cache}
+  - {name: config, docs: https://docs.vlt.io/cli/commands/config}
+  - {name: docs, docs: https://docs.vlt.io/cli/commands/docs}
+  - {name: bugs, docs: https://docs.vlt.io/cli/commands/bugs}
+  - {name: repo, docs: https://docs.vlt.io/cli/commands/repo}
+  - {name: help, docs: https://docs.vlt.io/cli/commands/help}
+  - {name: version, docs: https://docs.vlt.io/cli/commands/version}
+key_flows:
+- name: Dependency Selector Syntax queries
+  description: vlt query targets dependencies with CSS-like selectors,
+    including security pseudo-classes like :vulnerable/:vuln and graph
+    selectors (:outdated, :semver, :published, :registry).
+  docs: https://docs.vlt.io/cli/selectors
+- name: Security and malware detection
+  description: Surface security risks and malware in dependencies via
+    security insights selectors.
+  docs: https://docs.vlt.io/cli/security
+- name: OIDC trusted publishing from CI
+  description: vlt publish exchanges a CI OIDC ID token for a short-lived
+    registry publish token (GitHub Actions native; GitLab/CircleCI via
+    NPM_ID_TOKEN).
+  docs: https://docs.vlt.io/cli/auth
+- name: Local serverless registry
+  description: vlx -y @vltpkg/vsr boots a local npm-compatible registry on
+    http://localhost:1337 for dev and CI.
+  docs: https://github.com/vltpkg/vsr
+related_binaries:
+- name: vlx
+  description: Package runner (npx equivalent).
+- name: vsr
+  description: Serverless registry binary shipped as @vltpkg/vsr.

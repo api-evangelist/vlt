@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/vltpkg/vltpkg/releases
+scheme: semver release-candidate train (1.0.0-rc.N), tagged GitHub releases
+  with generated notes; the vlt npm package tracks the same versions.
+current_version: 1.0.0-rc.32
+current_release_date: '2026-06-03'
+entries:
+- version: v1.0.0-rc.32
+  date: '2026-06-03'
+  breaking: false
+  highlights:
+  - 'feat(query): add :vulnerable/:vuln selector'
+  - 'chore(token): make token subcommand aliases more consistent'
+  - 'fix(workspaces): install with workspaces was not reifying; paths resolve
+    relative to cwd'
+  - 'fix(graph): clean up edges and guard against workspace removal'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.32
+- version: v1.0.0-rc.31
+  date: '2026-05-22'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.31
+- version: v1.0.0-rc.30
+  date: '2026-05-21'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.30
+- version: v1.0.0-rc.29
+  date: '2026-05-13'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.29
+- version: v1.0.0-rc.27
+  date: '2026-04-24'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.27
+- version: v1.0.0-rc.26
+  date: '2026-04-23'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.26
+- version: v1.0.0-rc.25
+  date: '2026-04-17'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.25
+- version: v1.0.0-rc.24
+  date: '2026-04-01'
+  url: https://github.com/vltpkg/vltpkg/releases/tag/v1.0.0-rc.24

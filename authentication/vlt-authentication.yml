@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+docs: https://docs.vlt.io/cli/auth
+source: https://docs.vlt.io/cli/auth
+notes: No public OpenAPI is published for the hosted registry (registry.vlt.io
+  is authentication-gated end to end, including /-/ping), so this profile is
+  captured from the published authentication documentation rather than derived
+  from a spec. Self-hosted vsr instances serve their own OpenAPI at /-/api.
+summary:
+  types: [http-bearer, oidc-exchange]
+  flows: [npm-web-login, bearer-token, env-token, ci-oidc-exchange]
+  mfa: true
+schemes:
+- name: npm-web-login
+  type: http
+  scheme: bearer
+  description: vlt login performs the npm web login flow against any registry
+    that supports it (including the default registry), storing the resulting
+    token in the local keychain. vlt logout removes the local token and
+    attempts to destroy it server-side.
+- name: bearer-token
+  type: http
+  scheme: bearer
+  description: Registries that issue bearer tokens are supported via vlt token
+    add (stored in vlt's keychain) or the VLT_TOKEN environment variable for
+    CI/headless use. Per-registry tokens use VLT_TOKEN_{registry-url-with-non-
+    alphanumerics-replaced-by-underscores}.
+- name: ci-oidc-exchange
+  type: openIdConnect
+  description: OIDC trusted publishing - in supported CI providers vlt requests
+    an OIDC ID token and exchanges it with the registry's token endpoint for a
+    short-lived publish credential; nothing persists after the job. Native
+    support for GitHub Actions (id-token write permission + vltpkg/setup-vlt);
+    GitLab CI and CircleCI via the NPM_ID_TOKEN environment variable. Falls
+    back silently to VLT_TOKEN or keychain auth when OIDC is unavailable.
+- name: otp-mfa
+  type: http
+  scheme: bearer
+  description: One-time password (OTP) / MFA is supported on registries that
+    require it.

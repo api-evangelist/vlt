@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/vltpkg/vsr
+standards:
+- id: npm-registry-api
+  conforms: true
+  evidence: vsr is documented as "a feature-rich, npm-compatible package
+    registry" that replicates core npm registry features; docs list npm, yarn,
+    pnpm, deno, and bun as compatible clients alongside vlt
+    (https://github.com/vltpkg/vsr).
+- id: semver
+  conforms: true
+  evidence: Package versioning follows semver (1.0.0-rc.N release train);
+    first-party @vltpkg/semver implementation
+    (https://docs.vlt.io/packages/semver).
+- id: oidc
+  conforms: true
+  evidence: OIDC trusted publishing - the registry token endpoint verifies CI
+    provider OIDC ID tokens (GitHub Actions, GitLab CI, CircleCI) and issues
+    short-lived publish credentials (https://docs.vlt.io/cli/auth).
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 authorization server surface published;
+    /.well-known/oauth-authorization-server and /openid-configuration return
+    404 on www.vlt.io and 401 on registry hosts.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error contract documented; no public
+    OpenAPI available to verify (hosted registry is auth-gated).
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on www.vlt.io and
+    docs.vlt.io.
+regulatory_claims:
+- id: gdpr
+  claimed: true
+  evidence: Security Policy states "vlt adheres to applicable regulations
+    (e.g. PIPEDA, GDPR, CCPA)" (https://www.vlt.io/security, last updated
+    2025-07-24).
+- id: ccpa
+  claimed: true
+  evidence: https://www.vlt.io/security compliance section.
+- id: pipeda
+  claimed: true
+  evidence: https://www.vlt.io/security compliance section.

@@ -1,25 +1,139 @@
 aid: vlt
 name: vlt
-description: vlt is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: vlt (pronounced "volt") is a JavaScript package management company started
+  by the creator of npm and former members of the npm core team, and backed by Accel.
+  It ships the open source vlt package manager CLI, the npm-compatible vlt serverless
+  registry (vsr) that runs on Cloudflare's edge network, and a hosted registry platform
+  at vlt.io with user, token, and access management exposed through an npm-compatible
+  registry API at registry.vlt.io.
 url: https://raw.githubusercontent.com/api-evangelist/vlt/refs/heads/main/apis.yml
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/vltpkg.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: full
+x-tier-reason: enriched-from-portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- JavaScript
+- Package Management
+- Package Registry
+- Developer Tools
+- CLI
+- Serverless
+- npm
+- Dependency Management
+- Open Source
+apis:
+- aid: vlt:vlt-serverless-registry-api
+  name: vlt Serverless Registry (vsr) API
+  description: npm-compatible package registry API implemented by vsr, vlt's serverless
+    registry. Exposes package publish/install endpoints (packuments, tarballs, dist-tags),
+    user and token management, granular access control, search, audit, and ping routes.
+    The hosted platform instance at registry.vlt.io is authentication-gated; self-hosted
+    vsr instances serve their own OpenAPI document at /-/api and an interactive API
+    reference at /-/docs.
+  baseURL: https://registry.vlt.io
+  humanURL: https://github.com/vltpkg/vsr
+  tags:
+  - Packages
+  - Registry
+  - Tokens
+  - Access
+  properties:
+  - url: https://github.com/vltpkg/vsr
+    type: Documentation
+  - url: https://docs.vlt.io/cli/registries
+    type: DeveloperPortal
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/vlt-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/vlt-domain-security.yml
+- type: Packages
+  url: packages/vlt-packages.yml
+- type: SDKs
+  url: packages/vlt-packages.yml
+- type: LLMsTxt
+  url: llms/vlt-llms.txt
+- type: CLI
+  url: cli/vlt-cli.yml
+- type: ChangeLog
+  url: changelog/vlt-changelog.yml
+- type: Lifecycle
+  url: lifecycle/vlt-lifecycle.yml
+- type: Authentication
+  url: authentication/vlt-authentication.yml
+- type: Conformance
+  url: conformance/vlt-conformance.yml
+- type: Compliance
+  url: https://www.vlt.io/security
+- type: Plans
+  url: plans/vlt-plans.yml
 - type: Website
-  url: https://www.vlt.sh/
+  url: https://www.vlt.io/
+- type: Documentation
+  url: https://docs.vlt.io/
+- type: GettingStarted
+  url: https://docs.vlt.io/cli
+- type: Blog
+  url: https://www.vlt.io/blog
+- type: BlogRSS
+  url: https://www.vlt.io/blog/rss.xml
+- type: Pricing
+  url: https://www.vlt.io/pricing
+- type: SignUp
+  url: https://www.vlt.io/sign-up
+- type: Login
+  url: https://www.vlt.io/sign-in
+- type: TermsOfService
+  url: https://www.vlt.io/terms
+- type: PrivacyPolicy
+  url: https://www.vlt.io/privacy
+- type: Security
+  url: https://www.vlt.io/security
+- type: StatusPage
+  url: https://status.vlt.io/
+- type: GitHubOrganization
+  url: https://github.com/vltpkg
+- type: Support
+  url: https://www.vlt.io/contact
+- type: Community
+  url: https://discord.gg/qdbXTqxZzZ
+- type: Roadmap
+  url: https://github.com/vltpkg/vsr/blob/main/info/ROADMAP.md
+- type: About
+  url: https://www.vlt.io/about
+- type: Careers
+  url: https://www.vlt.io/careers
+- type: Press
+  url: https://www.vlt.io/press
+- type: Benchmarks
+  url: https://benchmarks.vlt.sh/

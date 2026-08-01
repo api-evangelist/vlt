@@ -1,0 +1,81 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.npmjs.org/ (packages verified individually on npm)
+packages:
+- language: javascript
+  registry: npm
+  name: vlt
+  url: https://www.npmjs.com/package/vlt
+  install: npm i -g vlt
+  official: true
+  notes: The vlt CLI (package manager client). Latest 1.0.0-rc.32 (2026-06-03).
+    Published from the vltpkg/vltpkg monorepo (infra/cli).
+- language: javascript
+  registry: npm
+  name: vlx
+  url: https://www.npmjs.com/package/vlx
+  install: npm i -g vlx
+  official: true
+  notes: vlt's package runner (npx equivalent). Same npm maintainers as vlt
+    (lukekarrys, ruyadorno, darcyclarke, vltops).
+- language: javascript
+  registry: npm
+  name: '@vltpkg/vsr'
+  url: https://www.npmjs.com/package/@vltpkg/vsr
+  install: vlx -y @vltpkg/vsr
+  official: true
+  notes: The vlt serverless registry - a modern, npm-compatible serverless
+    registry that runs on Cloudflare. Latest 1.0.0-rc.18 (2026-02-04).
+- language: javascript
+  registry: npm
+  name: '@vltpkg/cli-js'
+  url: https://www.npmjs.com/package/@vltpkg/cli-js
+  install: npm i @vltpkg/cli-js
+  official: true
+  notes: JavaScript distribution of the vlt CLI.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/registry-client'
+  url: https://www.npmjs.com/package/@vltpkg/registry-client
+  install: npm i @vltpkg/registry-client
+  official: true
+  notes: First-party client library for talking to npm-compatible registry
+    APIs (including vsr and registry.vlt.io). Docs at
+    https://docs.vlt.io/packages/registry-client.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/semver'
+  url: https://www.npmjs.com/package/@vltpkg/semver
+  install: npm i @vltpkg/semver
+  official: true
+  notes: vlt's semver implementation. Docs at https://docs.vlt.io/packages/semver.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/query'
+  url: https://www.npmjs.com/package/@vltpkg/query
+  install: npm i @vltpkg/query
+  official: true
+  notes: Dependency Selector Syntax query engine. Docs at
+    https://docs.vlt.io/packages/query.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/spec'
+  url: https://www.npmjs.com/package/@vltpkg/spec
+  install: npm i @vltpkg/spec
+  official: true
+  notes: Package specifier parsing. Docs at https://docs.vlt.io/packages/spec.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/graph'
+  url: https://www.npmjs.com/package/@vltpkg/graph
+  install: npm i @vltpkg/graph
+  official: true
+  notes: Dependency graph library. Docs at https://docs.vlt.io/packages/graph.
+- language: javascript
+  registry: npm
+  name: '@vltpkg/security-archive'
+  url: https://www.npmjs.com/package/@vltpkg/security-archive
+  install: npm i @vltpkg/security-archive
+  official: true
+  notes: Security insights archive used by the CLI's security and malware
+    detection. Docs at https://docs.vlt.io/packages/security-archive.
