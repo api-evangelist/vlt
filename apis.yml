@@ -45,6 +45,17 @@ tags:
 - Serverless
 - npm
 - Dependency Management
+- Open-Source
+tags_raw:
+- Company
+- JavaScript
+- Package Management
+- Package Registry
+- Developer Tools
+- CLI
+- Serverless
+- npm
+- Dependency Management
 - Open Source
 apis:
 - aid: vlt:vlt-serverless-registry-api
