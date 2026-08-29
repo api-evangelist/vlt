@@ -7,6 +7,17 @@ description: vlt (pronounced "volt") is a JavaScript package management company 
   at vlt.io with user, token, and access management exposed through an npm-compatible
   registry API at registry.vlt.io.
 url: https://raw.githubusercontent.com/api-evangelist/vlt/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
