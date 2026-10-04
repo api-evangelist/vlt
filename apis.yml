@@ -57,7 +57,7 @@ tags:
 - Serverless
 - npm
 - Dependency Management
-- Open-Source
+- Open Source
 tags_raw:
 - Company
 - JavaScript
@@ -69,6 +69,7 @@ tags_raw:
 - npm
 - Dependency Management
 - Open Source
+- Open-Source
 apis:
 - aid: vlt:vlt-serverless-registry-api
   name: vlt Serverless Registry (vsr) API
